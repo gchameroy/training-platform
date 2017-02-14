@@ -1,0 +1,1012 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Platform",
+				"PlatformEvents"
+			],
+			[
+				"User",
+				"UserInterface"
+			],
+			[
+				"event",
+				"event_listener"
+			],
+			[
+				"OCA",
+				"OCAntispam"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"ROLE_",
+				"ROLE_ADMIN"
+			],
+			[
+				"aut",
+				"authenticationUtils"
+			],
+			[
+				"req",
+				"requestStack"
+			],
+			[
+				"CON",
+				"context"
+			],
+			[
+				"create",
+				"createView"
+			],
+			[
+				"getU",
+				"getUrl"
+			],
+			[
+				"getUp",
+				"getUploadRootDir"
+			],
+			[
+				"tem",
+				"tempFileName"
+			],
+			[
+				"te",
+				"tempFileName"
+			],
+			[
+				"OC",
+				"OCPlatformBundle"
+			],
+			[
+				"Form",
+				"FormEvent"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"prto",
+				"prototype"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"add",
+				"addDeleteLink"
+			],
+			[
+				"Advert",
+				"AdvertType"
+			],
+			[
+				"form",
+				"formBuilder"
+			],
+			[
+				"nb",
+				"nbPages"
+			],
+			[
+				"quer",
+				"query"
+			],
+			[
+				"li",
+				"listAdverts"
+			],
+			[
+				"a",
+				"advert"
+			],
+			[
+				"find",
+				"findAll"
+			],
+			[
+				"getA",
+				"getAdvert"
+			],
+			[
+				"ca",
+				"categoryNames"
+			],
+			[
+				"whe",
+				"where"
+			],
+			[
+				"ord",
+				"orderBy"
+			],
+			[
+				"Qu",
+				"queryBuilder"
+			],
+			[
+				"query",
+				"queryBuilder"
+			],
+			[
+				"creat",
+				"createQueryBuilder"
+			],
+			[
+				"lis",
+				"listAdvertSkills"
+			],
+			[
+				"l",
+				"listCategories"
+			],
+			[
+				"pers",
+				"persist"
+			],
+			[
+				"appl",
+				"application2"
+			],
+			[
+				"set",
+				"setAuthor"
+			],
+			[
+				"app",
+				"application1"
+			],
+			[
+				"setA",
+				"setAuthor"
+			],
+			[
+				"D",
+				"DateTime"
+			],
+			[
+				"im",
+				"img\tTag"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"back-gr",
+				"background-color"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"loc",
+				"locale"
+			],
+			[
+				"mai",
+				"mailer"
+			],
+			[
+				"min",
+				"minLength"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"list",
+				"listAdverts"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"h",
+				"html\thtml"
+			],
+			[
+				"A",
+				"Advert"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"d",
+				"delete"
+			],
+			[
+				"s",
+				"s_data"
+			],
+			[
+				"print",
+				"print_r"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "symfony/composer.json",
+			"settings":
+			{
+				"buffer_size": 2400,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "symfony/app/AppKernel.php",
+			"settings":
+			{
+				"buffer_size": 2033,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "symfony/app/config/parameters.yml",
+			"settings":
+			{
+				"buffer_size": 362,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "symfony/app/config/config.yml",
+			"settings":
+			{
+				"buffer_size": 2403,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 287.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/gael/Sites/MoocPlatform/symfony",
+		"/Users/gael/Sites/MoocPlatform/symfony/app",
+		"/Users/gael/Sites/MoocPlatform/symfony/app/config"
+	],
+	"file_history":
+	[
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/AppKernel.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/composer.json",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/config/routing_dev.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Controller/AdvertController.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/Resources/TwigBundle/views/Exception/error404.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/Resources/TwigBundle/views/Exception/error.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/config/config.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/public/css/main.css",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/Advert.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/config/services.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/ParamConverter/JsonParamConverter.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/config/routing.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Advert/translation.twig.html",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/translations/messages.fr.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/translations/messages.de.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/translations/messages.en.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Bigbrother/MessageListener.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Bigbrother/MessageNotificator.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Event/MessagePostEvent.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Event/PlatformEvents.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Beta/BetaListener.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Antispam/OCAntispam.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Twig/AntispamExtension.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Beta/betaHTMLAdder.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Form/CkeditorType.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Form/AdvertEditType.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Form/AdvertType.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/UserBundle/Resources/views/layout.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/CoreBundle/Resources/views/layout.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/config/security.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/UserBundle/Entity/User.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/UserBundle/Repository/UserRepository.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/UserBundle/OCUserBundle.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/UserBundle/DataFixtures/ORM/LoadUser.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/UserBundle/Resources/config/doctrine/User.orm.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/UserBundle/Resources/views/Security/login.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/UserBundle/Controller/SecurityController.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Advert/form.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Validator/Antiflood.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Validator/AntifloodValidator.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Repository/ApplicationRepository.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/Application.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Form/CategoryType.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Form/ImageType.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Repository/CategoryRepository.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Repository/AdvertRepository.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/AdvertSkill.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/Category.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/Image.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/Skill.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/config/routing.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Advert/delete.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Advert/view.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/config/services.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Advert/index.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Email/ApplicationMailer.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/DoctrineListener/ApplicationCreationListener.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/AdvertRepository.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/ApplicationRepository.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/AdvertSkill.php~",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Advert/edit.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Advert/add.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/DataFixtures/ORM/LoadSkill.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Entity/Advert.php~",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/DataFixtures/ORM/LoadCategory.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/config/parameters.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/CoreBundle/Controller/DefaultController.php",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/CoreBundle/Resources/views/Default/index.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/CoreBundle/Resources/views/Default/contact.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/CoreBundle/Resources/config/routing.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/layout.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Advert/menu.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/Resources/views/layout.html.twig",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/app/config/config_dev.yml",
+		"/Users/gael/Sites/tuto_symfony_sdz/Symfony/src/OC/PlatformBundle/Resources/views/Default/index.html.twig",
+		"/Users/gael/Sites/default.conf",
+		"/Users/gael/Sites/test_paravent.php",
+		"/Users/gael/Sites/index.html",
+		"/Users/gael/Documents/test_paravent.php",
+		"/Users/gael/Sites/index.php",
+		"/Users/gael/Library/Application Support/Sublime Text 3/Packages/User/Word Highlight.sublime-settings",
+		"/Users/gael/Library/Application Support/Sublime Text 3/Packages/WordHighlight/Word Highlight.sublime-settings"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"form",
+			"getUs",
+			"user",
+			"OC\\\\",
+			"$alt",
+			"alt",
+			"$alt",
+			"alt",
+			"$alt",
+			"alt",
+			"@request_stack",
+			"EntityType",
+			"proto",
+			"twig",
+			"whereCurrentYear",
+			"getAdvertWithCategories",
+			"stof",
+			"updatedAt",
+			"applications",
+			"plateform",
+			"Category",
+			"categories",
+			"advert",
+			"image",
+			"doctrine:schema:update --force",
+			"image",
+			"mage",
+			"Image",
+			"image",
+			"getOcPlatform_AntispamService",
+			"oc_platform_view"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "symfony/composer.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								278,
+								278
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										344,
+										345
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										277,
+										278
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 74.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "symfony/app/AppKernel.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1028,
+								1028
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										1037,
+										1038
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/square_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										198,
+										199
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "symfony/app/config/parameters.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 362,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								362,
+								362
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content"
+							],
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "symfony/app/config/config.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2402,
+								2215
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 394.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "MoocPlatform.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
