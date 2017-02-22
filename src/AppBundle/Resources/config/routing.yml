@@ -1,0 +1,15 @@
+homepage:
+    path:     /
+    defaults: { _controller: AppBundle:Default:index }
+
+backend:
+    path: /backend
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: Backend/index.html.twig
+
+platform:
+    path: /platform
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: Platform/index.html.twig

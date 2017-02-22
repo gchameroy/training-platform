@@ -8,14 +8,24 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    /**
-     * @Route("/", name="homepage")
-     */
+    
     public function indexAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        ]);
+    {    
+        if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
+
+            if ($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
+
+                return $this->redirectToRoute('backend');
+            } 
+
+            if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+                  
+                return $this->redirectToRoute('platform');
+            }
+
+            throw new \LogicException("Unknow roles");            
+        }
+
+        return $this->redirectToRoute('login');
     }
 }

@@ -1,0 +1,69 @@
+{# app/Resources/views/layout.html.twig #}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initiale-scale=1" >
+
+		<title>{% block title %} OC Plateforme {% endblock %}</title>
+
+		{% block stylesheets %}
+			<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		{% endblock %}
+		<style type="text/css">
+			.flash-notice{
+				height:50px;
+				width: 95%;
+				background-color: CornflowerBlue;
+				margin: 10px;
+				padding: 10px;
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+
+		{# On affiche les messages flash que définissent les contrôleurs du bundle #}
+		{% for key, messages in app.session.flashbag.all() %}
+		    {% for message in messages %}
+		      	<div class="alert alert-{{ key }}">
+		        	{{ message|trans({}, 'FOSUserBundle') }}
+		    	</div>
+		    {% endfor %}
+		{% endfor %}
+
+		<div class="container">
+			<div id="header" class="jumbotron">
+				<h1>Plateforme de Test</h1>
+				<p>
+					Ce projet est propulsé par Darkmira, 
+					Il à pour but de vous faire progresser.
+				</p>
+				<p>
+					<a class="btn btn-primary btn-lg" href="https://www.darkmira.fr/">
+						Venez nous voir >>
+					</a>
+				</p>
+			</div>
+
+
+
+			<div id="content" class="col-md-9">
+				{% block body %}
+				{% endblock %}
+			</div>	
+			
+
+			
+
+		</div>
+		
+		{% block javascripts %}
+			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    	{% endblock %}
+
+	</body>
+</html>
