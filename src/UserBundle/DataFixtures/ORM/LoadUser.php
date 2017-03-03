@@ -5,15 +5,30 @@ namespace UserBundle\DataFixtures\ORM;
 use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 use UserBundle\Entity\User;
+use Symfony\Component\DependencyInjection\ContainerAwareInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
-class LoadUser implements FixtureInterface
+
+class LoadUser implements FixtureInterface, ContainerAwareInterface
 {
+    /**
+     * @var  ContainerInterface
+     */
+    
+    private $container;
+
+    public function setContainer(ContainerInterface $container = null)
+    {
+        $this->container = $container;
+    } 
+
+
     public function load(ObjectManager $manager)
     {
         $user1 = new User();
         $user1->setUsername('gael');
 
-        $encoder = $this->get('security.password_encoder');
+        $encoder = $this->container->get('security.password_encoder');
         $encoded = $encoder->encodePassword($user1, 'gaelpass' );
         $user1->setPassword($encoded);
 
@@ -27,7 +42,7 @@ class LoadUser implements FixtureInterface
         $user2 = new User();
         $user2->setUsername('cyrille');
 
-        $encoder = $this->get('security.password_encoder');
+        $encoder = $this->container->get('security.password_encoder');
         $encoded = $encoder->encodePassword($user2, 'futepass' );
         $user2->setPassword($encoded);
 

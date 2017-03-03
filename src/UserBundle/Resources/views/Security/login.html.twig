@@ -4,23 +4,33 @@
 
 {% block body %}
 
-  {# S'il y a une erreur, on l'affiche dans un joli cadre #}
     {% if error %}
         <div class="alert alert-danger">{{ error.message }}</div>
     {% endif %}
 
-    <div class="well">
-        {# Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu #}
-        <form action="{{ path('login_check') }}" method="post">
-            <label for="username">Login :</label>
-            <input type="text" id="username" name="_username" value="{{ last_username }}" />
+    <div class="">
 
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password" name="_password" />
-            <br />
-            <input type="submit" value="Connexion" />
-            <a href="{{ path('adduser') }}" > <input type="button" value="Subscribe"> </a>
+        <form action="{{ path('login_check') }}" method="post" class="form-horizontal">
+            <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">Login :</label>
+                <div class="col-sm-10">
+                    <input type="text" id="username" name="_username" value="{{ last_username }}" class="form-control" placeholder="Login" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="col-sm-2 control-label">Mot de passe :</label>
+                <div class="col-sm-10">
+                    <input type="password" id="password" name="_password" class="form-control" placeholder="Password" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-default" type="submit"> Connect </button>
+                    <a href="{{ path('adduser') }}" class="btn btn-default" > Subscribe </a>
+                </div>
+            </div>
         </form>
+
     </div>
 
 {% endblock %}

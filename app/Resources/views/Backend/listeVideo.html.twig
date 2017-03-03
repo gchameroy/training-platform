@@ -1,0 +1,38 @@
+{% extends "Backend/index.html.twig" %}
+
+{% block body %}
+
+    <h4>Gestion Video</h4>
+
+    <div class="table-responsive">
+        <table class="table table-borbered">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Titre</td>
+                    <td>Extension</td>
+                    <td>Description</td>
+                    <td>
+                        <a href="{{ path('video_add') }}" class="btn btn-default glyphicon glyphicon-plus"></a>
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for Video in listVideo %}
+                    <tr>
+                        <td>{{ Video.id }}</td>
+                        <td>{{ Video.titre }}</td>
+                        <td>{{ Video.extension }}</td>
+                        <td>{{ Video.description }}</td>
+                        <td>
+                            <a href="{{ path('video_modif',{'id':Video.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
+                            <a href="{{ path('video_delete',{'id':Video.id}) }}" class="btn glyphicon glyphicon-trash"></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

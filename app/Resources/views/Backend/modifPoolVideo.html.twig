@@ -1,0 +1,16 @@
+{% extends "Backend/index.html.twig" %}
+
+{% block body %}
+
+    <h4>Modification d'une Pool Video</h4>
+
+    {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_row(form.libelle) }}
+        </div>
+        
+        <button class="btn btn-default" type="submit"> Submit </button>
+        <a href="{{ path('pool_video_manage') }}" class="btn btn-default" > Cancel </a>
+    {{ form_end(form) }}
+
+{% endblock %}

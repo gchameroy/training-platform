@@ -14,7 +14,7 @@ class SecurityController extends Controller
     {
         // Si le visiteur est déjà identifié, on le redirige vers l'accueil
         if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED')) {
-            var_dump('je suis dedans');
+            return $this->redirectToRoute('homepage');
         }
 
         // Le service authentication_utils permet de récupérer le nom d'utilisateur
@@ -34,7 +34,7 @@ class SecurityController extends Controller
         $user = new User();
         
         $form = $this->createForm(SubscribeType::class, $user)
-                        ->add('save',     SubmitType::class);
+            ->add('save',     SubmitType::class);
                    
         if ($request->isMethod('POST')) {
             $form->handleRequest($request);
@@ -51,7 +51,9 @@ class SecurityController extends Controller
                 $em->persist($user);
                 $em->flush();
 
-                $request->getSession()->getFlashBag()->add('notice', 'User bien enregistrée');
+                $request->getSession()
+                    ->getFlashBag()
+                    ->add('notice', 'User bien enregistrée');
             }
 
             return $this->redirectToRoute('homepage');

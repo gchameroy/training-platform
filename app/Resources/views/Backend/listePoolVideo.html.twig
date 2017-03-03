@@ -1,0 +1,36 @@
+{% extends "Backend/index.html.twig" %}
+
+{% block body %}
+
+    <h4>Gestion Pool Video</h4>
+
+    <div class="table-responsive">
+        <table class="table table-borbered">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Pool Video</td>
+                    <td>Nb Video</td>
+                    <td width="100px" align="center">
+                        <a href="{{ path('pool_video_add') }}" class="btn btn-default glyphicon glyphicon-plus"></a>
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for poolVideo in listPoolVideo %}
+                    <tr>
+                        <td>{{ poolVideo.id }}</td>
+                        <td>{{ poolVideo.libelle }}</td>
+                        <td>[ {{poolVideo.videos|length}} ]</td>
+                        <td>
+                            <a href="{{ path('pool_video_modif',{'id':poolVideo.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
+                            <a href="{{ path('pool_video_delete',{'id':poolVideo.id}) }}" class="btn glyphicon glyphicon-trash"></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
