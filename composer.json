@@ -1,5 +1,6 @@
 {
     "name": "gael/symfony",
+    "description": "It is a video training application",
     "license": "proprietary",
     "type": "project",
     "autoload": {
