@@ -1,0 +1,37 @@
+{% extends "Backend/index.html.twig" %}
+
+{% block body %}
+
+    <h4>Gestion Pool Question</h4>
+
+    <div class="table-responsive">
+        <table class="table table-borbered">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Pool Question</td>
+                    <td>%</td>
+                    <td>Nb Question</td>
+                    <td width="100px" class="text-center">
+                        <a href="{{ path('pool_question_add') }}" class="btn btn-default glyphicon glyphicon-plus"></a>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for poolQuestion in listPoolQuestion %}
+                    <tr>
+                        <td>{{ poolQuestion.id }}</td>
+                        <td>{{ poolQuestion.title }}</td>
+                        <td>{{ poolQuestion.rate }}</td>
+                        <td>[ {{poolQuestion.questions|length}} ]</td>
+                        <td>
+                            <a href="{{ path('pool_question_edit',{'id':poolQuestion.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
+                            <a href="{{ path('pool_question_delete',{'id':poolQuestion.id}) }}" class="btn glyphicon glyphicon-trash"></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

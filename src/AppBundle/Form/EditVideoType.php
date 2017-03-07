@@ -15,13 +15,11 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 
 
-
-class VideoType extends AbstractType
+class EditVideoType extends AbstractType
 {
     public function buildform(FormBuilderInterface $builder, array $option)
     {
         $builder->add('title', TextType::class)
-                ->add('file', FileType::class)
                 ->add('description', TextareaType::class)
                 ->add('poolVideo', EntityType::class, array(
                         'class' => 'AppBundle:PoolVideo',
@@ -29,8 +27,7 @@ class VideoType extends AbstractType
                             return $pvr->createQueryBuilder('pv');
                         },
                         'choice_label' => 'title',
-                ) 
-            )
+                )) 
         ;        
     }
 

@@ -12,21 +12,20 @@
                     <td>Titre</td>
                     <td>Extension</td>
                     <td>Description</td>
-                    <td>
+                     <td width="100px" class="text-center">
                         <a href="{{ path('video_add') }}" class="btn btn-default glyphicon glyphicon-plus"></a>
                     </td>
                 </tr>
             </thead>
-
             <tbody>
                 {% for Video in listVideo %}
                     <tr>
                         <td>{{ Video.id }}</td>
-                        <td>{{ Video.titre }}</td>
+                        <td>{{ Video.title }}</td>
                         <td>{{ Video.extension }}</td>
                         <td>{{ Video.description }}</td>
                         <td>
-                            <a href="{{ path('video_modif',{'id':Video.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
+                            <a href="{{ path('video_edit',{'id':Video.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
                             <a href="{{ path('video_delete',{'id':Video.id}) }}" class="btn glyphicon glyphicon-trash"></a>
                         </td>
                     </tr>

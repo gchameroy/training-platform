@@ -11,20 +11,19 @@
                     <td>#</td>
                     <td>Pool Video</td>
                     <td>Nb Video</td>
-                    <td width="100px" align="center">
+                    <td width="100px" class="text-center">
                         <a href="{{ path('pool_video_add') }}" class="btn btn-default glyphicon glyphicon-plus"></a>
                     </td>
                 </tr>
             </thead>
-
             <tbody>
                 {% for poolVideo in listPoolVideo %}
                     <tr>
                         <td>{{ poolVideo.id }}</td>
-                        <td>{{ poolVideo.libelle }}</td>
+                        <td>{{ poolVideo.title }}</td>
                         <td>[ {{poolVideo.videos|length}} ]</td>
                         <td>
-                            <a href="{{ path('pool_video_modif',{'id':poolVideo.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
+                            <a href="{{ path('pool_video_edit',{'id':poolVideo.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
                             <a href="{{ path('pool_video_delete',{'id':poolVideo.id}) }}" class="btn glyphicon glyphicon-trash"></a>
                         </td>
                     </tr>

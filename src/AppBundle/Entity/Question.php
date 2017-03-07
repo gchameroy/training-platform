@@ -6,16 +6,17 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Video
+ * Question
  *
- * @ORM\Table(name="video")
- * @ORM\HasLifecycleCallbacks
- * @ORM\Entity(repositoryClass="AppBundle\Repository\VideoRepository")
- * @UniqueEntity(fields="title", message="Une vidéo existe déjà avec ce titre.")
+ * @ORM\Table(name="question")
+ * @ORM\hasLifecycleCallbacks
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\QuestionRepository")
+ * @UniqueEntity(fields="title", message="Une question existe déjà avec ce titre.")
  */
-class Video
+class Question
 {
     /**
      * @var int
@@ -37,36 +38,65 @@ class Video
     /**
      * @var string
      *
-     * @ORM\Column(name="extension", type="string", length=255)
-     * 
+     * @ORM\Column(name="image", type="string", length=255)
      */
-    private $extension;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="text")
-     */
-    private $description;
-
-    /**
-    * @ORM\Column(name="alt", type="string", length=255, nullable=true)
-    */
-    private $alt;
+    private $image;
 
     /**
      * @var \stdClass
      *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\PoolVideo", inversedBy="videos")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\PoolQuestion", inversedBy="questions")
      */
-    private $poolVideo;
+    private $poolQuestion;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="extension", type="string", length=255,nullable=true)
+     * 
+     */
+    private $extension;
 
     private $file;
 
     private $tempFilename;
-  
-    
 
+    /**
+    * @ORM\OneToMany(targetEntity="AppBundle\Entity\Response", mappedBy="question")
+    */
+    private $responses;
+
+
+
+
+    public function __construct()
+    {
+        $this->responses = new ArrayCollection();
+    }
+
+    /**
+    * @param Response $response
+    */
+    public function addResponse(Response $response)
+    {
+        $this->responses->add($response);
+    }
+
+    /**
+    * @param Response $response
+    */
+    public function removeResponse(Response $response)
+    {
+        $this->responses->removeElement($response);
+    }
+
+    /**
+    * @return \Doctrine\Common\Collections\Collection
+    */
+    public function getResponses()
+    {
+        return $this->responses;
+    }
 
 
 
@@ -87,7 +117,7 @@ class Video
      *
      * @param string $title
      *
-     * @return Video
+     * @return Question
      */
     public function setTitle($title)
     {
@@ -104,6 +134,30 @@ class Video
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set image
+     *
+     * @param string $image
+     *
+     * @return Question
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image
+     *
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 
     /**
@@ -130,69 +184,39 @@ class Video
         return $this->extension;
     }
 
+
+
+
     /**
-     * Set description
+     * Set poolQuestion
      *
-     * @param string $description
+     * @param \stdClass $poolQuestion
      *
-     * @return Video
+     * @return poolQuestion
      */
-    public function setDescription($description)
+    public function setPoolQuestion(PoolQuestion $poolQuestion)
     {
-        $this->description = $description;
+        $this->poolQuestion = $poolQuestion;
 
         return $this;
     }
 
     /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Set poolVideo
-     *
-     * @param \stdClass $poolVideo
-     *
-     * @return Video
-     */
-    public function setPoolVideo(PoolVideo $poolVideo)
-    {
-        $this->poolVideo = $poolVideo;
-
-        return $this;
-    }
-
-    /**
-     * Get poolVideo
+     * Get poolQuestion
      *
      * @return \stdClass
      */
-    public function getPoolVideo()
+    public function getPoolQuestion()
     {
-        return $this->poolVideo;
+        return $this->poolQuestion;
     }
 
-    /**
-    * @param string $alt
-    */
-    public function setAlt($alt)
-    {
-        $this->alt = $alt;
-    }
 
-    /**
-    * @return string
-    */
-    public function getAlt()
-    {
-        return $this->alt;
-    }
+
+
+
+
+
 
     public function getFile()
     {
@@ -207,7 +231,7 @@ class Video
             $this->tempFilename = $this->extension;
 
             $this->extension = null;
-            $this->alt = null;
+            $this->image = null;
         }
     }
 
@@ -222,7 +246,7 @@ class Video
         }
 
         $this->extension = $this->file->guessExtension();
-        $this->alt = $this->file->getClientOriginalName();
+        $this->image = $this->file->getClientOriginalName();
     }
 
     /**
@@ -267,12 +291,12 @@ class Video
             unlink($this->tempFilename);
         }
 
-        $this->poolVideo->removeVideo($this);
+        $this->poolQuestion->removeQuestion($this);
     }
 
     public function getUploadDir()
     {
-        return 'uploads/video';
+        return 'uploads/questions';
     }
 
     protected function getUploadRootDir()
@@ -284,6 +308,7 @@ class Video
     {
         return $this->getUploadDir().'/'.$this->getId().'.'.$this->getExtension();
     }
+
 
 }
 
