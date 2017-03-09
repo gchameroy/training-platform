@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use AppBundle\Entity\PoolQuestion;
-use AppBundle\Form\PoolQuestionType;
+use AppBundle\Form\Type\PoolQuestionType;
 
 class BackendPoolQuestionController extends Controller
 {

@@ -1,28 +1,32 @@
 <?php
 
-namespace AppBundle\Form;
+namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use AppBundle\Repository\PoolQuestionRepository;
+use AppBundle\Repository\QuestionRepository;
 
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 
 
-class EditQuestionType extends AbstractType
+class EditResponseType extends AbstractType
 {
     public function buildform(FormBuilderInterface $builder, array $option)
     {
         $builder->add('title', TextType::class)
-                ->add('poolQuestion', EntityType::class, array(
-                        'class' => 'AppBundle:PoolQuestion',
-                        'query_builder' => function (PoolQuestionRepository $pqr) {
-                            return $pqr->createQueryBuilder('pq');
+                ->add('isFair', CheckboxType::class, array(
+                    'label' =>  'Bonne réponse ',
+                    'required'  =>  false
+                ))
+                ->add('question', EntityType::class, array(
+                        'class' => 'AppBundle:Question',
+                        'query_builder' => function (QuestionRepository $qr) {
+                            return $qr->createQueryBuilder('pr');
                         },
                         'choice_label' => 'title',
                 )) 
@@ -33,7 +37,7 @@ class EditQuestionType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Question'
+            'data_class' => 'AppBundle\Entity\Response'
         ));
     }
 }

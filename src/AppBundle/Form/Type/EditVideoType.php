@@ -1,34 +1,33 @@
 <?php
 
-namespace AppBundle\Form;
+namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use AppBundle\Repository\PoolQuestionRepository;
+use AppBundle\Repository\PoolVideoRepository;
 
 use Symfony\Component\Form\Extension\Core\Type\FormType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 
 
-
-class QuestionType extends AbstractType
+class EditVideoType extends AbstractType
 {
     public function buildform(FormBuilderInterface $builder, array $option)
     {
         $builder->add('title', TextType::class)
-                ->add('file', FileType::class)
-                ->add('poolQuestion', EntityType::class, array(
-                        'class' => 'AppBundle:PoolQuestion',
-                        'query_builder' => function (PoolQuestionRepository $pqr) {
-                            return $pqr->createQueryBuilder('pq');
+                ->add('description', TextareaType::class)
+                ->add('poolVideo', EntityType::class, array(
+                        'class' => 'AppBundle:PoolVideo',
+                        'query_builder' => function (PoolVideoRepository $pvr) {
+                            return $pvr->createQueryBuilder('pv');
                         },
                         'choice_label' => 'title',
-                ) 
-            )
+                )) 
         ;        
     }
 
@@ -36,7 +35,7 @@ class QuestionType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Question'
+            'data_class' => 'AppBundle\Entity\Video'
         ));
     }
 }

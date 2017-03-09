@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use AppBundle\Entity\PoolVideo;
-use AppBundle\Form\PoolVideoType;
+use AppBundle\Form\Type\PoolVideoType;
 
 class BackendPoolVideoController extends Controller
 {

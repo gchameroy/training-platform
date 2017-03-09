@@ -8,8 +8,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use AppBundle\Entity\Question;
-use AppBundle\Form\QuestionType;
-use AppBundle\Form\EditQuestionType;
+use AppBundle\Form\Type\QuestionType;
+use AppBundle\Form\Type\EditQuestionType;
 
 
 

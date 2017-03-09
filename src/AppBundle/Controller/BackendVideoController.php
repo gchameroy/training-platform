@@ -8,8 +8,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use AppBundle\Entity\Video;
-use AppBundle\Form\VideoType;
-use AppBundle\Form\EditVideoType;
+use AppBundle\Form\Type\VideoType;
+use AppBundle\Form\Type\EditVideoType;
 
 class BackendVideoController extends Controller
 {

@@ -8,8 +8,8 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 use AppBundle\Entity\Response;
-use AppBundle\Form\ResponseType;
-use AppBundle\Form\EditResponseType;
+use AppBundle\Form\Type\ResponseType;
+use AppBundle\Form\Type\EditResponseType;
 
 class BackendResponseController extends Controller
 {
