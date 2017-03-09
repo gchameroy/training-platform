@@ -15,5 +15,9 @@ parameters:
     mailer_user:       ~
     mailer_password:   ~
 
+    upload_directory: '%kernel.root_dir%/../web/uploads/'
+    question_directory: 'questions/'
+    video_directory: 'videos/'
+
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
