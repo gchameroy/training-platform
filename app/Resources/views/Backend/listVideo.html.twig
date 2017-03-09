@@ -10,7 +10,7 @@
                 <tr>
                     <td>#</td>
                     <td>Titre</td>
-                    <td>Extension</td>
+                    <td>Name</td>
                     <td>Description</td>
                      <td width="100px" class="text-center">
                         <a href="{{ path('video_add') }}" class="btn btn-default glyphicon glyphicon-plus"></a>
@@ -22,7 +22,7 @@
                     <tr>
                         <td>{{ Video.id }}</td>
                         <td>{{ Video.title }}</td>
-                        <td>{{ Video.extension }}</td>
+                        <td>{{ Video.file }}</td>
                         <td>{{ Video.description }}</td>
                         <td>
                             <a href="{{ path('video_edit',{'id':Video.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
