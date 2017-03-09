@@ -62,6 +62,10 @@ class BackendVideoController extends Controller
         $video = $em->getRepository('AppBundle:Video')
             ->find($id);
 
+        if (null === $video) {
+            throw new NotFoundHttpException("Error Video with id ".$id." don't exist.");
+        }
+
         $form = $this->createForm(EditVideoType::class, $video);
 
         if ($request->isMethod('POST')) {
@@ -93,7 +97,7 @@ class BackendVideoController extends Controller
 
         $video = $em->getRepository('AppBundle:Video')->find($id);
 
-        if (null == $video) {
+        if (null === $video) {
             throw new NotFoundHttpException("Error Video with id ".$id." don't exist.");
         }
 

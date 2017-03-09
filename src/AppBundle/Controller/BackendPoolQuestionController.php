@@ -61,7 +61,7 @@ class BackendPoolQuestionController extends Controller
         $poolQuestion = $em->getRepository('AppBundle:PoolQuestion')
             ->find($id);
 
-        if (null == $poolQuestion) {
+        if (null === $poolQuestion) {
             throw new NotFoundHttpException("Error Pool Question with id ".$id." don't exist.");
         }
 
@@ -99,7 +99,7 @@ class BackendPoolQuestionController extends Controller
         $poolQuestion = $em->getRepository('AppBundle:PoolQuestion')
             ->find($id);
 
-        if (null == $poolQuestion) {
+        if (null === $poolQuestion) {
             throw new NotFoundHttpException("Error Pool Question with id ".$id." don't exist.");
         }
 

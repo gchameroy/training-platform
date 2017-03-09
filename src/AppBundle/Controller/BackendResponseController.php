@@ -62,6 +62,10 @@ class BackendResponseController extends Controller
         $response = $em->getRepository('AppBundle:Response')
             ->find($id);
 
+        if (null === $response) {
+            throw new NotFoundHttpException("Error Response with id ".$id." don't exist.");
+        }
+        
         $form = $this->createForm(EditResponseType::class, $response);
 
         if ($request->isMethod('POST')) {
@@ -93,7 +97,7 @@ class BackendResponseController extends Controller
 
         $response = $em->getRepository('AppBundle:Response')->find($id);
 
-        if (null == $response) {
+        if (null === $response) {
             throw new NotFoundHttpException("Error Response with id ".$id." don't exist.");
         }
 

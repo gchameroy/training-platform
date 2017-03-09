@@ -61,7 +61,7 @@ class BackendPoolVideoController extends Controller
         $poolVideo = $em->getRepository('AppBundle:PoolVideo')
             ->find($id);
 
-        if (null == $poolVideo) {
+        if (null === $poolVideo) {
             throw new NotFoundHttpException("Error Pool Video with id ".$id." don't exist.");
         }
 
@@ -98,7 +98,7 @@ class BackendPoolVideoController extends Controller
         $poolVideo = $em->getRepository('AppBundle:PoolVideo')
             ->find($id);
 
-        if (null == $poolVideo) {
+        if (null === $poolVideo) {
             throw new NotFoundHttpException("Error Pool Video with id ".$id." don't exist.");
         }
 

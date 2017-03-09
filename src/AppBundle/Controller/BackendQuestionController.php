@@ -64,6 +64,10 @@ class BackendQuestionController extends Controller
         $question = $em->getRepository('AppBundle:Question')
             ->find($id);
 
+        if (null === $question) {
+            throw new NotFoundHttpException("Error Question with id ".$id." don't exist.");
+        }
+
         $form = $this->createForm(EditQuestionType::class, $question);
 
         if ($request->isMethod('POST')) {
@@ -95,7 +99,7 @@ class BackendQuestionController extends Controller
 
         $question = $em->getRepository('AppBundle:Question')->find($id);
 
-        if (null == $question) {
+        if (null === $question) {
             throw new NotFoundHttpException("Error Question with id ".$id." don't exist.");
         }
 
