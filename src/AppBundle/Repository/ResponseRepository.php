@@ -11,3 +11,4 @@ namespace AppBundle\Repository;
 class ResponseRepository extends \Doctrine\ORM\EntityRepository
 {
 }
+

@@ -29,3 +29,4 @@ class DefaultController extends Controller
         return $this->redirectToRoute('login');
     }
 }
+

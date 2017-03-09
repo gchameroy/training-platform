@@ -28,3 +28,4 @@ class SubscribeType extends AbstractType
         ));
     }
 }
+

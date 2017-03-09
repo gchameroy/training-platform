@@ -11,3 +11,4 @@ namespace AppBundle\Repository;
 class VideoRepository extends \Doctrine\ORM\EntityRepository
 {
 }
+

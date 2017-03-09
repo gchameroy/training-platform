@@ -9,3 +9,4 @@ use Doctrine\ORM\EntityRepository;
 class PoolVideoRepository extends EntityRepository
 {
 }
+

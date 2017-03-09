@@ -11,3 +11,4 @@ namespace AppBundle\Repository;
 class PoolQuestionRepository extends \Doctrine\ORM\EntityRepository
 {
 }
+
