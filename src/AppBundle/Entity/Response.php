@@ -93,7 +93,7 @@ class Response
      *
      * @return Response
      */
-    public function setIsFair($fair)
+    public function setFair($fair)
     {
         $this->isFair = $fair;
 
@@ -105,7 +105,7 @@ class Response
      *
      * @return bool
      */
-    public function getIsFair()
+    public function isFair()
     {
         return $this->isFair;
     }
