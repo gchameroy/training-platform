@@ -5,7 +5,6 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
  * Video
@@ -15,7 +14,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  * @ORM\Entity(repositoryClass="AppBundle\Repository\VideoRepository")
  * @UniqueEntity(fields="title", message="Une vidéo existe déjà avec ce titre.")
  */
-class Video extends Controller
+class Video
 {
     /**
      * @var int
