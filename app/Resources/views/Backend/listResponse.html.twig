@@ -1,0 +1,35 @@
+{% extends "Backend/index.html.twig" %}
+
+{% block body %}
+
+    <h4>Gestion Question</h4>
+
+    <div class="table-responsive">
+        <table class="table table-borbered">
+            <thead>
+                <tr>
+                    <td>#</td>
+                    <td>Titre</td>
+                    <td>Reponse</td>
+                    <td width="100px" class="text-center">
+                        <a href="{{ path('response_add') }}" class="btn btn-default glyphicon glyphicon-plus"></a>
+                    </td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for response in listResponse %}
+                    <tr>
+                        <td>{{ response.id }}</td>
+                        <td>{{ response.title }}</td>
+                        <td>{{ response.isFair }}</td>
+                        <td>
+                            <a href="{{ path('response_edit',{'id':response.id}) }}" class="btn glyphicon glyphicon-pencil"></a>
+                            <a href="{{ path('response_delete',{'id':response.id}) }}" class="btn glyphicon glyphicon-trash"></a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

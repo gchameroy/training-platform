@@ -12,7 +12,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  *
  * @ORM\Table(name="pool_video")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\PoolVideoRepository")
- * @UniqueEntity(fields="libelle", message="Une vidéo existe déjà avec ce titre.")
+ * @UniqueEntity(fields="title", message="Une vidéo existe déjà avec ce titre.")
  */
 class PoolVideo
 {
@@ -28,10 +28,10 @@ class PoolVideo
     /**
      * @var string
      *
-     * @ORM\Column(name="libelle", type="string", length=255)
+     * @ORM\Column(name="title", type="string", length=255)
      * @Assert\NotBlank()
      */
-    private $libelle;
+    private $title;
 
      /**
     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Video", mappedBy="poolVideo")
@@ -94,27 +94,27 @@ class PoolVideo
     }
 
     /**
-     * Set libelle
+     * Set title
      *
-     * @param string $libelle
+     * @param string $title
      *
      * @return PoolVideo
      */
-    public function setLibelle($libelle)
+    public function setTitle($title)
     {
-        $this->libelle = $libelle;
+        $this->title = $title;
 
         return $this;
     }
 
     /**
-     * Get libelle
+     * Get title
      *
      * @return string
      */
-    public function getLibelle()
+    public function getTitle()
     {
-        return $this->libelle;
+        return $this->title;
     }
 }
 

@@ -1,6 +1,7 @@
 homepage:
     path:     /
-    defaults: { _controller: AppBundle:Default:index }
+    defaults: 
+        _controller: AppBundle:Default:index 
 
 backend:
     path: /backend
@@ -9,54 +10,132 @@ backend:
         template: Backend/index.html.twig
 
 
+
 pool_video_manage:
     path:     /backend/pool_video
-    defaults: { _controller: AppBundle:Backend:managePoolVideo }
+    defaults: 
+        _controller: AppBundle:BackendPoolVideo:managePoolVideo
 
 pool_video_add:
     path: /backend/pool_video/add
     defaults:
-        _controller: AppBundle:Backend:addPoolVideo
+        _controller: AppBundle:BackendPoolVideo:addPoolVideo
 
-pool_video_modif:
-    path: /backend/pool_video/modif/{id}
+pool_video_edit:
+    path: /backend/pool_video/edit/{id}
     defaults:
-        _controller: AppBundle:Backend:modifPoolVideo
+        _controller: AppBundle:BackendPoolVideo:editPoolVideo
     requirements:
         id: '\d+'
 
 pool_video_delete:
     path: /backend/pool_video/delete/{id}
     defaults:
-        _controller: AppBundle:Backend:deletePoolVideo
+        _controller: AppBundle:BackendPoolVideo:deletePoolVideo
     requirements:
         id: '\d+'
-
 
 
 video_manage:
     path: /backend/video
     defaults:
-        _controller: AppBundle:Backend:manageVideo
+        _controller: AppBundle:BackendVideo:manageVideo
 
 video_add:
     path: /backend/video/add
     defaults:
-        _controller: AppBundle:Backend:addVideo
+        _controller: AppBundle:BackendVideo:addVideo
 
-video_modif:
-    path: /backend/video/modif/{id}
+video_edit:
+    path: /backend/video/edit/{id}
     defaults:
-        _controller: AppBundle:Backend:modifVideo
+        _controller: AppBundle:BackendVideo:editVideo
     requirements:
         id: '\d+'
 
 video_delete:
     path: /backend/video/delete/{id}
     defaults:
-        _controller: AppBundle:Backend:deleteVideo
+        _controller: AppBundle:BackendVideo:deleteVideo
     requirements:
         id: '\d+'
+
+
+
+pool_question_manage:
+    path:     /backend/pool_question
+    defaults:  
+        _controller: AppBundle:BackendPoolQuestion:managePoolQuestion
+
+pool_question_add:
+    path: /backend/pool_question/add
+    defaults:
+        _controller: AppBundle:BackendPoolQuestion:addPoolQuestion
+
+pool_question_edit:
+    path: /backend/pool_question/edit/{id}
+    defaults:
+        _controller: AppBundle:BackendPoolQuestion:editPoolquestion
+    requirements:
+        id: '\d+'
+
+pool_question_delete:
+    path: /backend/pool_question/delete/{id}
+    defaults:
+        _controller: AppBundle:BackendPoolQuestion:deletePoolQuestion
+    requirements:
+        id: '\d+'
+
+
+question_manage:
+    path: /backend/question
+    defaults:
+        _controller: AppBundle:BackendQuestion:manageQuestion
+
+question_add:
+    path: /backend/question/add
+    defaults:
+        _controller: AppBundle:BackendQuestion:addQuestion
+
+question_edit:
+    path: /backend/question/edit/{id}
+    defaults:
+        _controller: AppBundle:BackendQuestion:editQuestion
+    requirements:
+        id: '\d+'
+
+question_delete:
+    path: /backend/question/delete/{id}
+    defaults:
+        _controller: AppBundle:BackendQuestion:deleteQuestion
+    requirements:
+        id: '\d+'
+
+
+response_manage:
+    path: /backend/response
+    defaults:
+        _controller: AppBundle:BackendResponse:manageResponse
+
+response_add:
+    path: /backend/response/add
+    defaults:
+        _controller: AppBundle:BackendResponse:addResponse
+
+response_edit:
+    path: /backend/response/edit/{id}
+    defaults:
+        _controller: AppBundle:BackendResponse:editResponse
+    requirements:
+        id: '\d+'
+
+response_delete:
+    path: /backend/response/delete/{id}
+    defaults:
+        _controller: AppBundle:BackendResponse:deleteResponse
+    requirements:
+        id: '\d+'
+
 
 
 

@@ -4,6 +4,17 @@ parameters:
 #    parameter_name: value
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+    app.file_uploader:
+        class: AppBundle\FileUploader
+        arguments:  ['%upload_directory%']
+
+    app.doctrine_file_listener:
+            class: AppBundle\EvenListener\FileUploadListener
+            arguments:
+                - '@app.file_uploader'
+                - '%question_directory%'
+                - '%video_directory%'
+            tags:
+                - { name: doctrine.event_listener, event: prePersist }
+                - { name: doctrine.event_listener, event: preUpdate }
+                - { name: doctrine.event_listener, event: postRemove }

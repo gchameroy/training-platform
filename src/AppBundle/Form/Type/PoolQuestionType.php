@@ -1,31 +1,30 @@
 <?php
 
-namespace UserBundle\Form;
+namespace AppBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\PercentType;
 
 
-class SubscribeType extends AbstractType
+
+
+class PoolQuestionType extends AbstractType
 {
     public function buildform(FormBuilderInterface $builder, array $option)
     {
-        $builder->add('username', TextType::class)
-                ->add('password', PasswordType::class)
-                ->add('email',    EmailType::class)
+        $builder->add('title', TextType::class)
+                ->add('rate', PercentType::class, array('type' => 'integer'))
         ;        
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'UserBundle\Entity\User'
+            'data_class' => 'AppBundle\Entity\PoolQuestion'
         ));
     }
 }
-

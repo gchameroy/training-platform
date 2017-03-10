@@ -5,16 +5,17 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * Video
+ * Question
  *
- * @ORM\Table(name="video")
- * @ORM\HasLifecycleCallbacks
- * @ORM\Entity(repositoryClass="AppBundle\Repository\VideoRepository")
- * @UniqueEntity(fields="title", message="Une vidéo existe déjà avec ce titre.")
+ * @ORM\Table(name="question")
+ * @ORM\hasLifecycleCallbacks
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\QuestionRepository")
+ * @UniqueEntity(fields="title", message="Une question existe déjà avec ce titre.")
  */
-class Video
+class Question
 {
     /**
      * @var int
@@ -37,27 +38,54 @@ class Video
      * @var string
      *
      * @ORM\Column(name="file", type="string", length=255)
-     * 
      */
     private $file;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="description", type="text")
-     */
-    private $description;
-
-    /**
      * @var \stdClass
      *
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\PoolVideo", inversedBy="videos")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\PoolQuestion", inversedBy="questions")
      */
-    private $poolVideo;
+    private $poolQuestion;
 
-  
-    
 
+
+    /**
+    * @ORM\OneToMany(targetEntity="AppBundle\Entity\Response", mappedBy="question")
+    */
+    private $responses;
+
+
+
+
+    public function __construct()
+    {
+        $this->responses = new ArrayCollection();
+    }
+
+    /**
+    * @param Response $response
+    */
+    public function addResponse(Response $response)
+    {
+        $this->responses->add($response);
+    }
+
+    /**
+    * @param Response $response
+    */
+    public function removeResponse(Response $response)
+    {
+        $this->responses->removeElement($response);
+    }
+
+    /**
+    * @return \Doctrine\Common\Collections\Collection
+    */
+    public function getResponses()
+    {
+        return $this->responses;
+    }
 
 
 
@@ -78,7 +106,7 @@ class Video
      *
      * @param string $title
      *
-     * @return Video
+     * @return Question
      */
     public function setTitle($title)
     {
@@ -102,7 +130,7 @@ class Video
      *
      * @param string $file
      *
-     * @return Video
+     * @return Question
      */
     public function setFile($file)
     {
@@ -121,54 +149,30 @@ class Video
         return $this->file;
     }
 
+
+
     /**
-     * Set description
+     * Set poolQuestion
      *
-     * @param string $description
+     * @param \stdClass $poolQuestion
      *
-     * @return Video
+     * @return poolQuestion
      */
-    public function setDescription($description)
+    public function setPoolQuestion(PoolQuestion $poolQuestion)
     {
-        $this->description = $description;
+        $this->poolQuestion = $poolQuestion;
 
         return $this;
     }
 
     /**
-     * Get description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-
-
-    /**
-     * Set poolVideo
-     *
-     * @param \stdClass $poolVideo
-     *
-     * @return Video
-     */
-    public function setPoolVideo(PoolVideo $poolVideo)
-    {
-        $this->poolVideo = $poolVideo;
-
-        return $this;
-    }
-
-    /**
-     * Get poolVideo
+     * Get poolQuestion
      *
      * @return \stdClass
      */
-    public function getPoolVideo()
+    public function getPoolQuestion()
     {
-        return $this->poolVideo;
+        return $this->poolQuestion;
     }
 
 }
